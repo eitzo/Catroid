@@ -14,7 +14,7 @@ pipeline {
             additionalBuildArgs '--build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) --build-arg KVM_GROUP_ID=$(getent group kvm | cut -d: -f3)'
             args '--net host -v /dev/bus/usb/:/dev/bus/usb -v /var/local/container_shared/gradle_cache/$EXECUTOR_NUMBER:/home/user/.gradle'
             // run on slave1 where nexus is connected to
-            label 'HardwareSensorBox'
+            label 'Slave4'
         }
     }
 
