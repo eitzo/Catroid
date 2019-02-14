@@ -7,7 +7,7 @@ pipeline {
             // docker build directory avoids that overhead
             dir 'docker'
             // run on slave1 where nexus is connected to
-            label 'HardwareSensorBox'
+            label 'Slave4'
             // Pass the uid and the gid of the current user (jenkins-user) to the Dockerfile, so a
             // corresponding user can be added. This is needed to provide the jenkins user inside
             // the container for the ssh-agent to work.
